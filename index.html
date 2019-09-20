@@ -13,7 +13,11 @@
 		<style>
 				@font-face{
 					font-family: 'Proxima';
-					src:url('/fonts/proxima.otf');
+					src:url('fonts/proxima.otf');
+				}
+				@font-face {
+					font-family: 'icon';
+					src: url('fonts/icon.ttf');
 				}
 				*{
 					margin: 0%;
@@ -55,12 +59,37 @@
 					margin: auto;
 					box-shadow: 0px 5px 25px #555555;
 				}
+
 				.contact{
+					display: flex;
+					justify-content: center;
 
 				}
 				.contactitem{
-
+					font-family: 'icon';
+					font-style: unset;
+					font-size: 16px;
+					color: #777777;
+					margin: 1%;
+					text-decoration: none;
 				}
+
+				.dropdown{
+					position: relative;
+					display: inline-block;
+				}
+				.dropdown-content{
+					display: none;
+					position: absolute;
+					background-color: #777777;
+					min-width: 25%;
+					padding: 12px 16px;
+					z-index: 1;
+				}
+				.dropdown:hover .dropdown-content{
+					display: block;
+				}
+
 				.showcase{
 					display: flex;
 					flex-wrap: wrap;
@@ -84,8 +113,18 @@
 			<div class="avatarBG"></div>
 		</div>
 		<h1>kzkt.//GraphicDesign.</h1>
-		<p style="letter-spacing: 1vw">"Design My Own Stories."</p>
-		<div class="contact"></div>
+		<p style="letter-spacing: 1vw">"正在建設中..."</p>
+		<div class="contact">
+			<a href="https://github.com/kzkt" class="contactitem" target="_blank">&#xe902;</a>
+			<a href="https://space.bilibili.com/266392" class="contactitem" target="_blank">&#xe900;</a>
+			<div class="contactitem dropdown">
+					<span>&#xe901;</span>
+					<div class="dropdown-content">
+						<p style="color: #bdc0b8">kawazawakurouto@gmail.com</p>
+					</div>
+			</div>
+			
+		</div>
 		<div>&nbsp;</div>
 		<div class="showcase">
 			<img src="images/imageworks/cubrix.webp" alt="" class="item">

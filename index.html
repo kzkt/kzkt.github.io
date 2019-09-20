@@ -41,7 +41,7 @@
 					width: 100vw;
 					height: 25vh;
 					z-index: 1;
-					filter:grayscale(75%) blur(25px);
+					filter:grayscale(90%) blur(15px);
 				}
 				.avatar{
 					position:absolute;
@@ -54,6 +54,16 @@
 					right: 0;
 					margin: auto;
 					box-shadow: 0px 5px 25px #555555;
+				}
+				.showcase{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					border: 7.5%
+				}
+				.item{
+					width: 25vw;
+					height: 25vw;
 				}
 				</style>
 	</head>
@@ -68,7 +78,10 @@
 		<h1>kzkt.//GraphicDesign.</h1>
 		<p style="letter-spacing: 1vw">"Design My Own Stories."</p>
 		<div>&nbsp;</div>
-		<p style="font-size: 3vw">Coming Soon...</p>
+		<div class="showcase">
+			<img src="images/imageworks/cubrix.webp" alt="" class="item">
+			<img src="images/imageworks/mhcmep2.webp" alt="" class="item">
+		</div>
 		<script src="" async defer></script>
 	</body>
 </html>

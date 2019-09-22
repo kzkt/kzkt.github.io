@@ -9,7 +9,7 @@
 		<title>kzkt.|GraphicDesign.</title>
                 <meta name="theme-color" content="#282828">
 		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="">
 		<style>
 				:root{
@@ -31,7 +31,8 @@
 					text-align: center;
 					font-family: "Proxima";
 					font-size: 8vmin;
-					max-block-size: 50%;
+					letter-spacing: -.05em;
+					user-select: none;
 				}
 				p{
 					text-align: center;
@@ -42,7 +43,6 @@
 					position:relative;
 					background: url('../images/avatar.png') no-repeat center center;
 					background-size: cover;
-					width: 100vw;
 					height: 25vh;
 					z-index: 1;
 					filter:grayscale(90%) blur(15px);
@@ -66,7 +66,10 @@
 					flex-wrap: nowrap;
 				}
 				.contactitem{
-					margin: 1vmin 1vmin 0;
+					margin: 1vmin .75vmin;
+				}
+				.contactitem img{
+					height: 2.25vmin;
 				}
 
 				.drop{
@@ -94,14 +97,38 @@
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: center;
-					border: 7.5%
 				}
-				.item{
-					width: 400px;
-					height: 400px;
-					object-fit: cover;
-					margin: 2vw;
+				@media (min-width: 1024px){
+					.item{
+						width: 30vw;
+						height: 30vw;
+						object-fit: cover;
+						margin: 1vmin;
+						border: .3em solid #383838;
+						box-shadow: 0 0 5px #00000050
+					}
 				}
+				@media (min-width: 768px) and (max-width: 1023px) {
+					.item{
+						width: 40vw;
+						height: 40vw;
+						object-fit: cover;
+						margin: 1vmin;
+						border: .3em solid #383838;
+						box-shadow: 0 0 5px #00000050
+					}
+				}
+				@media (max-width: 767px) {
+					.item{
+						width: 90vw;
+						height: 90vw;
+						object-fit: cover;
+						margin: 1vmin;
+						border: .3em solid #383838;
+						box-shadow: 0 0 5px #00000050
+					}
+				}
+				
 				</style>
 	</head>
 	<body>
@@ -113,12 +140,17 @@
 			<div class="avatarBG"></div>
 		</div>
 		<h1>kzkt.//GraphicDesign.</h1>
-		<p style="letter-spacing: 1vw;font-size: 1.75vmin">"絕讚建設中..."</p>
+		<p style="letter-spacing: 3vmin;font-size: 1.75vmin">"絕讚建設中..."</p>
 
 		<div class="contact">
 			<div class="contactitem">
 				<a href="https://space.bilibili.com/266392" target="_blank">
 					<img src="svg/bilibili.svg" alt="">
+				</a>
+			</div>
+			<div class="contactitem">
+				<a href="https://github.com/kzkt" target="_blank">
+					<img src="svg/github.svg" alt="">
 				</a>
 			</div>
 			<div class="drop contactitem">
@@ -128,14 +160,12 @@
 				</div>
 			</div>
 		</div>
-
-		<div>&nbsp;</div>
-
 		<div class="showcase">
 			<img src="images/imageworks/cubrix.webp" alt="" class="item">
 			<img src="images/imageworks/mhcmep2.webp" alt="" class="item">
 			<img src="images/imageworks/gzh.webp" alt="" class="item">
 			<img src="images/imageworks/autisticvhs.webp" alt="" class="item">
+			<img src="images/gif/xmas.gif" alt="" class="item">
 		</div>
 		<script src="" async defer></script>
 	</body>

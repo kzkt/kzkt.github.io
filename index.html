@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>kzkt.//GraphicDesign.</title>
+		<title>kzkt.//AutisticUniverse.</title>
                 <meta name="theme-color" content="#282828">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -22,6 +22,15 @@
 				}
 				@font-face{
 					font-family: 'Source Code Pro';
+					src: local('Source Code Pro'),url('fonts/scp.ttf');
+				}
+				@font-face {
+					font-family: 'Source Code Pro Bold Italic';
+					src: local('SourceCodePro-BoldIt'),url('fonts/scp_boldit.ttf');
+				}
+				@font-face {
+					font-family: 'Source Code Pro Italic';
+					src: local('Source Code Pro Italic'),url('fonts/scp_it.ttf');
 				}
 				*{
 					margin: 0%;
@@ -33,7 +42,7 @@
 				}
 				h1{
 					text-align: center;
-					font-family: "Proxima";
+					font-family: "Proxima",sans-serif;
 					font-size: 8.25vmin;
 					letter-spacing: -.05em;
 					user-select: none;
@@ -43,12 +52,11 @@
 				}
 				p{
 					text-align: center;
-					font-family: "Source Code Pro",sans-serif;
-					font-style: italic;
+					font-family: "Source Code Pro Italic",sans-serif;
 				}
 				.avatarBG{
 					position:relative;
-					background: url('../images/avatar.png') no-repeat center center;
+					background: url('../images/avatarbg.png') no-repeat center center;
 					background-size: cover;
 					height: 30vh;
 					z-index: 0;
@@ -64,7 +72,7 @@
 					left: 0;
 					right: 0;
 					margin: auto;
-					box-shadow: 0px 5px 25px #555555;
+					box-shadow: 0px 5px 25px #00000050;
 				}
 
 				.contact{
@@ -151,8 +159,8 @@
 			<div><img src="images/avatar.png" alt="" class="avatar"></div>
 			<div class="avatarBG"></div>
 		</div>
-		<h1 class="h1abs">kzkt.//GraphicDesign.</h1>
-		<p style="letter-spacing: .3vmin;font-size: 1.25vmin">- 大學生，映像設計、圖形設計學習中。 -</p>
+		<h1 class="h1abs">kzkt.//AutisticUniverse.</h1>
+		<p style="letter-spacing: .5vmin;font-size: 1.75vmin;font-style: italic">- 大學生，映像設計、圖形設計學習中。 -</p>
 
 		<div class="contact">
 			<div class="contactitem">
@@ -182,14 +190,28 @@
 			<img src="images/imageworks/cubrix.webp" alt="" class="item">
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=64426531&cid=111856536&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 			<img src="images/imageworks/mhcmep2.webp" alt="" class="item">
-			<img src="images/imageworks/gzh.webp" alt="" class="item">
+			<img src="images/imageworks/gzh.webp" alt="" class="item" autoplay>
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=58375573&cid=101833425&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=52859762&cid=92493402&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+			<video class="item" autoplay loop>
+				<source src="video/goodbyeheisei.webm" type="video/webm">
+			</video>
+			<img class="item" src="images/imageworks/mhcmep1.webp" alt="">
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=42560976&cid=74675001&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 			<img src="images/imageworks/autisticvenus.webp" alt="" class="item">
 			<img src="images/imageworks/autisticvhs.webp" alt="" class="item">
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=39360897&cid=69164890&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-			<img src="images/gif/xmas.gif" alt="" class="item">
+			<img src="images/gif/xmas.webp" alt="" class="item">
+		</div>
+
+		<div style="padding: 3%"></div>
+
+		<div style="font-size: 14px">
+			<p style="font-size: 18px;padding: 2%;font-family:'source code pro bold italic','sans-serif'">
+				My Online Portfolio : "kzkt.//AutisticUniverse."
+			</p>
+			<p>©2019-2020 kzkt. - Powered by Github Pages. </p>
+			<p style="padding: 2%">&nbsp;</p>
 		</div>
 		<script src="" async defer></script>
 	</body>

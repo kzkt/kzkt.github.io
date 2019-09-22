@@ -11,7 +11,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="">
-		<link rel="Shortcut Icon" type="image/x-icon" href="favicon.ico">
+		<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
 		<style>
 				:root{
 					font-size: 10px
@@ -21,7 +21,7 @@
 					src:url('fonts/proxima.otf');
 				}
 				@font-face{
-					font-family: 'Source Code Pro'
+					font-family: 'Source Code Pro';
 				}
 				*{
 					margin: 0%;
@@ -34,9 +34,12 @@
 				h1{
 					text-align: center;
 					font-family: "Proxima";
-					font-size: 8vmin;
+					font-size: 8.25vmin;
 					letter-spacing: -.05em;
 					user-select: none;
+				}
+				.h1abs{
+					transform: translateY(-55%)
 				}
 				p{
 					text-align: center;
@@ -47,17 +50,17 @@
 					position:relative;
 					background: url('../images/avatar.png') no-repeat center center;
 					background-size: cover;
-					height: 25vh;
-					z-index: 1;
-					filter:grayscale(90%) blur(15px);
+					height: 30vh;
+					z-index: 0;
+					filter:grayscale(99%) opacity(25%);
 				}
 				.avatar{
 					position:absolute;
-					width: 15vh;
+					width: 13vh;
 					z-index: 2;
 					border-radius: 100%;
-					border: .5vh solid #bdc0bd;
-					top: 5vh;
+					border: .45vh solid #bdc0bd;
+					top: 6vh;
 					left: 0;
 					right: 0;
 					margin: auto;
@@ -82,7 +85,8 @@
 				}
 				.drop-item{
 					position: absolute;
-					display: none;
+					visibility: hidden;
+					opacity: 0;
 					margin: 50%;
 					background: #555555;
 					font-size: 1.75em;
@@ -90,11 +94,15 @@
 					padding: 0.3em 1em;
 					box-shadow: 0px 6px 15px #00000050;
 					border: .1em solid #666666;
-					transform: translateX(-50%);
+					transform: translateX(-50%) translateY(-50%);
+					transition: all .2s linear;
 
 				}
 				.drop:hover .drop-item{
-					display: block;
+					visibility: visible;
+					opacity: 1;
+					transform: translateX(-50%) translateY(0%);
+					transition: all .2s linear;
 				}
 
 				.showcase{
@@ -107,7 +115,7 @@
 						width: 25vw;
 						height: 25vw;
 						object-fit: cover;
-						margin: 2.45vmin;
+						margin: 1vw;
 						border: .3em solid #383838;
 						box-shadow: 0 0 5px #00000050
 					}
@@ -143,8 +151,8 @@
 			<div><img src="images/avatar.png" alt="" class="avatar"></div>
 			<div class="avatarBG"></div>
 		</div>
-		<h1>kzkt.//GraphicDesign.</h1>
-		<p style="letter-spacing: 1.25vmin;font-size: 1.25vmin">"絕讚建設中..."</p>
+		<h1 class="h1abs">kzkt.//GraphicDesign.</h1>
+		<p style="letter-spacing: .3vmin;font-size: 1.25vmin">- 大學生，映像設計、圖形設計學習中。 -</p>
 
 		<div class="contact">
 			<div class="contactitem">

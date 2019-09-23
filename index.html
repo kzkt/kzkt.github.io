@@ -13,143 +13,174 @@
 		<link rel="stylesheet" href="">
 		<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
 		<style>
-				:root{
-					font-size: 10px
-				}
-				@font-face{
-					font-family: 'Proxima';
-					src:url('fonts/proxima.otf');
-				}
-				@font-face{
-					font-family: 'Source Code Pro';
-					src: local('Source Code Pro'),url('fonts/scp.ttf');
-				}
-				@font-face {
-					font-family: 'Source Code Pro Bold Italic';
-					src: local('SourceCodePro-BoldIt'),url('fonts/scp_boldit.ttf');
-				}
-				@font-face {
-					font-family: 'Source Code Pro Italic';
-					src: local('Source Code Pro Italic'),url('fonts/scp_it.ttf');
-				}
-				*{
-					margin: 0%;
-					padding: 0%;
-				}
-				body{
-					color: #bdc0b8;
-					background-color: #282828
-				}
-				h1{
-					text-align: center;
-					font-family: "Proxima",sans-serif;
-					font-size: 8.25vmin;
-					letter-spacing: -.05em;
-					user-select: none;
-				}
-				.h1abs{
-					transform: translateY(-55%)
-				}
-				p{
-					text-align: center;
-					font-family: "Source Code Pro Italic",sans-serif;
-				}
-				.avatarBG{
-					position:relative;
-					background: url('../images/avatarbg.png') no-repeat center center;
-					background-size: cover;
-					height: 30vh;
-					z-index: 0;
-					filter:grayscale(99%) opacity(25%);
-				}
-				.avatar{
-					position:absolute;
-					width: 13vh;
-					z-index: 2;
-					border-radius: 100%;
-					border: .45vh solid #bdc0bd;
-					top: 6vh;
-					left: 0;
-					right: 0;
-					margin: auto;
-					box-shadow: 0px 5px 25px #00000050;
-				}
+			:root{
+				font-size: 10px
+			}
+			@font-face{
+				font-family: 'Proxima';
+				src:url('fonts/proxima.otf');
+			}
+			@font-face{
+				font-family: 'Source Code Pro';
+				src: local('Source Code Pro'),url('fonts/scp.ttf');
+			}
+			@font-face {
+				font-family: 'Source Code Pro Bold Italic';
+				src: local('SourceCodePro-BoldIt'),url('fonts/scp_boldit.ttf');
+			}
+			@font-face {
+				font-family: 'Source Code Pro Italic';
+				src: local('Source Code Pro Italic'),url('fonts/scp_it.ttf');
+			}
+			*{
+				margin: 0%;
+				padding: 0%;
+			}
+			body{
+				color: #bdc0b8;
+				background-color: #282828
+			}
+			h1{
+				text-align: center;
+				font-family: "Proxima",sans-serif;
+				font-size: 8.25vmin;
+				letter-spacing: -.05em;
+				-webkit-user-select: none;
+				   -moz-user-select: none;
+					-ms-user-select: none;
+						user-select: none;
+			}
+			.h1abs{
+				-webkit-transform: translateY(-50%);
+						transform: translateY(-50%)
+			}
+			p{
+				text-align: center;
+				font-family: "Source Code Pro Italic",sans-serif;
+			}
+			.avatarBG{
+				position: relative;
+				background: url('../images/avatarbg.png') no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				background-position: center ;
+				width: 100vw;
+				height: 40vh;
+				z-index: -11;
+				-webkit-filter:opacity(25%);
+						filter:opacity(25%);
+			}
+			.avatar{
+				position:absolute;
+				width: 13vh;
+				z-index: 2;
+				border-radius: 100%;
+				border: .45vh solid #bdc0bd;
+				top: 13vh;
+				left: 0;
+				right: 0;
+				margin: auto;
+				-webkit-box-shadow: 0px 5px 25px #00000050;
+						box-shadow: 0px 5px 25px #00000050;
+			}
 
-				.contact{
-					display: flex;
-					justify-content: center;
+			.contact{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+					-ms-flex-pack: center;
+						justify-content: center;
+				-ms-flex-wrap: nowrap;
 					flex-wrap: nowrap;
-				}
-				.contactitem{
-					margin: 3vh 1em 5vh;
-				}
-				.contactitem img{
-					height: 18px;
-				}
+			}
+			.contactitem{
+				margin: 3vh 1em 5vh;
+			}
+			.contactitem img{
+				height: 18px;
+			}
 
-				.drop{
-					position: relative;
-					display: inline-block;
-				}
-				.drop-item{
-					position: absolute;
-					visibility: hidden;
-					opacity: 0;
-					margin: 50%;
-					background: #555555;
-					font-size: 1.75em;
-					text-align: center;
-					padding: 0.3em 1em;
-					box-shadow: 0px 6px 15px #00000050;
-					border: .1em solid #666666;
-					transform: translateX(-50%) translateY(-50%);
-					transition: all .2s linear;
+			.drop{
+				position: relative;
+				display: inline-block;
+			}
+			.drop-item{
+				position: absolute;
+				visibility: hidden;
+				opacity: 0;
+				margin: 50%;
+				background: #555555;
+				font-size: 1.75em;
+				text-align: center;
+				padding: 0.3em 1em;
+				-webkit-box-shadow: 0px 6px 15px #00000050;
+						box-shadow: 0px 6px 15px #00000050;
+				border: .1em solid #666666;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+						transform: translateX(-50%) translateY(-50%);
+				-webkit-transition: all .2s linear;
+				transition: all .2s linear;
 
-				}
-				.drop:hover .drop-item{
-					visibility: visible;
-					opacity: 1;
-					transform: translateX(-50%) translateY(0%);
-					transition: all .2s linear;
-				}
+			}
+			.drop:hover .drop-item{
+				visibility: visible;
+				opacity: 1;
+				-webkit-transform: translateX(-50%) translateY(0%);
+						transform: translateX(-50%) translateY(0%);
+				-webkit-transition: all .2s linear;
+				transition: all .2s linear;
+			}
 
-				.showcase{
-					display: flex;
+			.showcase{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				display: -webkit-flex;
+				-ms-flex-wrap: wrap;
 					flex-wrap: wrap;
-					justify-content: center;
+				-webkit-box-pack: center;
+					-ms-flex-pack: center;
+						justify-content: center;
+			}
+			@media (min-width: 1024px){
+				.item{
+					width: 25vw;
+					height: 25vw;
+					-o-object-fit: cover;
+					   object-fit: cover;
+					margin: 1vw;
+					border: .3em solid #383838;
+					-webkit-box-shadow: 0 0 5px #00000050;
+							box-shadow: 0 0 5px #00000050
 				}
-				@media (min-width: 1024px){
-					.item{
-						width: 25vw;
-						height: 25vw;
-						object-fit: cover;
-						margin: 1vw;
-						border: .3em solid #383838;
-						box-shadow: 0 0 5px #00000050
-					}
+			}
+			@media (min-width: 768px) and (max-width: 1023px) {
+				.item{
+					width: 40vw;
+					height: 40vw;
+					-o-object-fit: cover;
+					   object-fit: cover;
+					margin: 1vmin;
+					border: .3em solid #383838;
+					-webkit-box-shadow: 0 0 5px #00000050;
+							box-shadow: 0 0 5px #00000050
 				}
-				@media (min-width: 768px) and (max-width: 1023px) {
-					.item{
-						width: 40vw;
-						height: 40vw;
-						object-fit: cover;
-						margin: 1vmin;
-						border: .3em solid #383838;
-						box-shadow: 0 0 5px #00000050
-					}
+			}
+			@media (max-width: 767px) {
+				.item{
+					width: 90vw;
+					height: 90vw;
+					-o-object-fit: cover;
+					   object-fit: cover;
+					margin: 1vmin;
+					border: .3em solid #383838;
+					-webkit-box-shadow: 0 0 5px #00000050;
+							box-shadow: 0 0 5px #00000050
 				}
-				@media (max-width: 767px) {
-					.item{
-						width: 90vw;
-						height: 90vw;
-						object-fit: cover;
-						margin: 1vmin;
-						border: .3em solid #383838;
-						box-shadow: 0 0 5px #00000050
-					}
-				}
-				
-				</style>
+			}
+			
+			</style>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -193,8 +224,10 @@
 			<img src="images/imageworks/gzh.webp" alt="" class="item" autoplay>
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=58375573&cid=101833425&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=52859762&cid=92493402&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-			<video class="item" autoplay loop>
+			<video class="item" autoplay loop controls>
 				<source src="video/goodbyeheisei.webm" type="video/webm">
+				<source src="video/goodbyeheisei.mp4" type="video/mp4">
+				您的浏览器不支持 video 标签。
 			</video>
 			<img class="item" src="images/imageworks/mhcmep1.webp" alt="">
 			<iframe class="item" src="//player.bilibili.com/player.html?aid=42560976&cid=74675001&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
